@@ -1,0 +1,57 @@
+public class Student {
+
+    String name;
+    int age;
+    String department;
+
+    // Constructor 1: No arguments
+    Student() {
+        name = "Unknown";
+        age = 0;
+        department = "Not Assigned";
+    }
+
+    // Constructor 2: Name only
+    Student(String name) {
+        this.name = name;
+        age = 0;
+        department = "Not Assigned";
+    }
+
+    // Constructor 3: Name and age
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+        department = "Not Assigned";
+    }
+
+    // Constructor 4: Name, age and department
+    Student(String name, int age, String department) {
+        this.name = name;
+        this.age = age;
+        this.department = department;
+    }
+
+    // Display student details
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Department: " + department);
+        System.out.println("--------------------");
+    }
+
+    public static void main(String[] args) {
+
+        // Creating objects using different constructors
+        Student s1 = new Student();
+        Student s2 = new Student("Arun");
+        Student s3 = new Student("Bala", 20);
+        Student s4 = new Student("Monish", 20, "CSE");
+
+        // Display details
+        s1.display();
+        s2.display();
+        s3.display();
+        s4.display();
+    }
+}
